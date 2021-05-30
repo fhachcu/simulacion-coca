@@ -1,6 +1,6 @@
 import {binomial, poisson, normal} from './distribuciones.js';   
 
-
+//Vriables
 let derrame = 0;
 let derrameMensual = 0;
 let derrameSemanal = 0;
@@ -21,6 +21,12 @@ const datosMensual = {
     ventaLatas: 0
 }
 
+const storageMeses = [];
+const storageSemanas = [];
+const storageTrimestre = [];
+
+//**********---------**************
+
 export function recorrerMeses(){
 
     let costoTotalLata = 0;
@@ -28,26 +34,31 @@ export function recorrerMeses(){
     for(let i=0; i<3; i++){
         
         recorrerDias();
-        let costoDerramemMensual = Math.round(normal(17,3),-2);
+        let costoDerramemMensual = normal(17,3);
         costoTotalLata = costoTotalLata +(costoDerramemMensual*(derrameMensual/354));   
         
         //Datos mensuales
-        datosMensual.derrame = Math.round(derrameMensual,-2);
+        datosMensual.derrame = derrameMensual;
         datosMensual.latasAllenar =  Math.trunc(derrameMensual/354);
-        datosMensual.perdidaJarabeDinero = Math.trunc(costoDerramemMensual*(derrameMensual/354),-2);
+        datosMensual.perdidaJarabeDinero = costoDerramemMensual*(derrameMensual/354);
         datosMensual.ventaLatas = datosMensual.latasAllenar * 60;
+        storageMeses.push({...datosMensual});
         
         console.log('datosMensual',{...datosMensual})
     }
 
         //Dato trimestral
-        datosTrimestral.derrame = Math.round(derrame,-2);
+        datosTrimestral.derrame = derrame;
         datosTrimestral.latasAllenar = Math.trunc(derrame/354);
-        datosTrimestral.perdidaJarabeDinero = Math.round(costoTotalLata,-2);
+        datosTrimestral.perdidaJarabeDinero = costoTotalLata;
         datosTrimestral.ventaLatas = datosTrimestral.latasAllenar * 60; 
         console.log('numSemana: ',numSemana);
 
-
+        storageTrimestre.push({...datosTrimestral});
+        
+        console.log(storageSemanas);
+        console.log(storageMeses);
+        console.log(storageTrimestre);
 
         return datosTrimestral;
 
@@ -65,7 +76,8 @@ function recorrerDias(){
         if(semana == 5){
             numSemana++;
             semana = 1;
-            console.log("Derrame semanal", derrameSemanal);
+            console.log("Derrame semanal",derrameSemanal);
+            storageSemanas.push(derrameSemanal);
             derrameSemanal = 0;
         }
         semana ++;
