@@ -14,35 +14,115 @@
     <title>Simulador</title>
   </head>
   <body>
-      <header class="container d-flex justify-content-around"> 
-        <img src="img/580b57fbd9996e24bc43c0e3.png" class="d-flex w-30" alt="logo-coca-cola" onclick="location.href='bienvenida.html'"/>
-        <h1 class="my-5">Simulador Without Losses</h1>
-      </header>
-    
-    <div class="container">
+    <header class="container">
       <div class="row justify-content-around">
         <div class="col-6">
-          <h1>vista simulador</h1>
-          <p>Periodo</p>
-          <input placeholder="Periodo que simulara semana, mes, trimestre   " />
-          <button class="btn btn-success">Simular</button>
-          <button class="btn btn-success">Deshacer</button>
+             <img
+        src="img/580b57fbd9996e24bc43c0e3.png"
+        class="img-coca"
+        alt="logo-coca-cola"
+        onclick="location.href='bienvenida.html'"
+      />
         </div>
         <div class="col-6">
-          <h3>Resultados</h3>
-          <input>
-          <input>
-          <input>
-          <input>
+            <h1 class="mt-4 text-center">Simulador Without Losses</h1>
+            <button class="btn btn-success btn-simulate m-2">Simular</button>
+        </div>
+      </div>
+     
+      
+    </header>
+
+    <div class="container">
+      <div class="row justify-content-around">
+      <div class="col-12">
+          <h3 class="text-center">Resultados Semanal</h3>
+          <table class="table table-hover">
+            <thead>
+              <tr>
+                <th scope="col">N° Semanas</th>
+                <th scope="col">Volumen(Litros)</th>
+                <th scope="col">Perdida($)</th>
+                <th scope="col">Perdida(Latas)</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">1</th>
+                <td>50</td>
+                <td>30000</td>
+                <td>60</td>
+              </tr>
+              <tr>
+                <th scope="row">2</th>
+                <td>55</td>
+                <td>1222</td>
+                <td>478</td>
+              </tr>
+            </tbody>
+          </table>
+          <button class="btn btn-success">Reiniciar</button>
+          <h3 class="text-center">Resultados Mensual</h3>
+          <table class="table table-hover">
+            <thead>
+              <tr>
+                <th scope="col">N° Mes</th>
+                <th scope="col">Volumen(Litros)</th>
+                <th scope="col">Perdida($)</th>
+                <th scope="col">Perdida(Latas)</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">1</th>
+                <td>Mark</td>
+                <td>Otto</td>
+                <td>@mdo</td>
+              </tr>
+              <tr>
+                <th scope="row">2</th>
+                <td>Jacob</td>
+                <td>Thornton</td>
+                <td>@fat</td>
+              </tr>
+            </tbody>
+          </table>
+          <button class="btn btn-success">Reiniciar</button>
+          <h3 class="text-center">Resultados Trimestral</h3>
+          <table class="table table-hover">
+            <thead>
+              <tr>
+                <th scope="col">Trimestre</th>
+                <th scope="col">First</th>
+                <th scope="col">Last</th>
+                <th scope="col">Handle</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">1</th>
+                <td>Mark</td>
+                <td>Otto</td>
+                <td>@mdo</td>
+              </tr>
+              <tr>
+                <th scope="row">2</th>
+                <td>Jacob</td>
+                <td>Thornton</td>
+                <td>@fat</td>
+              </tr>
+            </tbody>
+          </table>
           <button class="btn btn-success">Reiniciar</button>
         </div>
       </div>
     </div>
-
+    <footer class="text-center fs-6">UTN - FRT - SIMULACION &copy;2021</footer>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
       crossorigin="anonymous"
     ></script>
+    
   </body>
 </html>
