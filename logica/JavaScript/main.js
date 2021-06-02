@@ -22,7 +22,7 @@ const renderizar = () => {
 
     tablaSemana.innerHTML +=` <tr>
                              <th scope="row">${index}</th>
-                             <td>${current}</td>
+                             <td>${current.toFixed(2)}</td>
                             `
 });
 
@@ -30,9 +30,9 @@ storageMeses.forEach((current, index) => {
 
   tablaMensual.innerHTML += `<tr>
                             <th scope="row">${index}</th>
-                            <td>${current.derrame}</td>
-                            <td>${current.perdidaJarabeDinero}</td>
-                            <td>${current.latasAllenar}</td>
+                            <td>${current.derrame.toFixed(2)}</td>
+                            <td>${current.perdidaJarabeDinero.toFixed(2)}</td>
+                            <td>${current.latasAllenar.toFixed(0)}</td>
                             <td>${current.ventaLatas}</td>
                             </tr>
                             `
@@ -41,9 +41,9 @@ storageMeses.forEach((current, index) => {
 storageTrimestre.forEach((current, index) => {
 
   tablaTrimestral.innerHTML += `<tr>
-                                <td>${current.derrame}</td>
-                                <td>${current.perdidaJarabeDinero}</td>
-                                <td>${current.latasAllenar}</td>
+                                <td>${current.derrame.toFixed(2)}</td>
+                                <td>${current.perdidaJarabeDinero.toFixed(2)}</td>
+                                <td>${current.latasAllenar.toFixed(2)}</td>
                                 <td>${current.ventaLatas}</td>
                                 </tr>
                               `
