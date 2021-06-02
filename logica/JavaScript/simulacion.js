@@ -21,9 +21,9 @@ const datosMensual = {
     ventaLatas: 0
 }
 
-const storageMeses = [];
-const storageSemanas = [];
-const storageTrimestre = [];
+export const storageMeses = [];
+export const storageSemanas = [];
+export const storageTrimestre = [];
 
 //**********---------**************
 
@@ -73,11 +73,12 @@ function recorrerDias(){
     for(let i=0; i<20; i++){
 
         recorrerHoras();
+        //Datos semanales
         if(semana == 5){
             numSemana++;
             semana = 1;
             console.log("Derrame semanal",derrameSemanal);
-            storageSemanas.push(derrameSemanal);
+            storageSemanas.push(derrameSemanal/1000);
             derrameSemanal = 0;
         }
         semana ++;

@@ -26,7 +26,7 @@
         </div>
         <div class="col-6">
             <h1 class="mt-4 text-center">Simulador Without Losses</h1>
-            <button class="btn btn-success btn-simulate m-2">Simular</button>
+            <button id="simular" class="btn btn-success btn-simulate m-2">Simular</button>
         </div>
       </div>
      
@@ -42,26 +42,11 @@
               <tr>
                 <th scope="col">N° Semanas</th>
                 <th scope="col">Volumen(Litros)</th>
-                <th scope="col">Perdida($)</th>
-                <th scope="col">Perdida(Latas)</th>
               </tr>
             </thead>
-            <tbody>
-              <tr>
-                <th scope="row">1</th>
-                <td>50</td>
-                <td>30000</td>
-                <td>60</td>
-              </tr>
-              <tr>
-                <th scope="row">2</th>
-                <td>55</td>
-                <td>1222</td>
-                <td>478</td>
-              </tr>
+            <tbody id="semanal">
             </tbody>
           </table>
-          <button class="btn btn-success">Reiniciar</button>
           <h3 class="text-center">Resultados Mensual</h3>
           <table class="table table-hover">
             <thead>
@@ -69,51 +54,27 @@
                 <th scope="col">N° Mes</th>
                 <th scope="col">Volumen(Litros)</th>
                 <th scope="col">Perdida($)</th>
-                <th scope="col">Perdida(Latas)</th>
+                <th scope="col">Latas a llenar</th>
               </tr>
             </thead>
-            <tbody>
+            <tbody id="mensual">
               <tr>
-                <th scope="row">1</th>
-                <td>Mark</td>
-                <td>Otto</td>
-                <td>@mdo</td>
-              </tr>
-              <tr>
-                <th scope="row">2</th>
-                <td>Jacob</td>
-                <td>Thornton</td>
-                <td>@fat</td>
               </tr>
             </tbody>
           </table>
-          <button class="btn btn-success">Reiniciar</button>
           <h3 class="text-center">Resultados Trimestral</h3>
           <table class="table table-hover">
             <thead>
               <tr>
-                <th scope="col">Trimestre</th>
-                <th scope="col">First</th>
-                <th scope="col">Last</th>
-                <th scope="col">Handle</th>
+                <th scope="col">Volumen(Litros)</th>
+                <th scope="col">Perdida($)</th>
+                <th scope="col">Latas a llenar</th>
+                <th scope="col">Ganancia latas sin llenar</th>
               </tr>
             </thead>
-            <tbody>
-              <tr>
-                <th scope="row">1</th>
-                <td>Mark</td>
-                <td>Otto</td>
-                <td>@mdo</td>
-              </tr>
-              <tr>
-                <th scope="row">2</th>
-                <td>Jacob</td>
-                <td>Thornton</td>
-                <td>@fat</td>
-              </tr>
+            <tbody id="trimestral">
             </tbody>
           </table>
-          <button class="btn btn-success">Reiniciar</button>
         </div>
       </div>
     </div>
@@ -123,6 +84,6 @@
       integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
       crossorigin="anonymous"
     ></script>
-    
+    <script src="../logica/JavaScript/main.js" type="module"></script>
   </body>
 </html>
