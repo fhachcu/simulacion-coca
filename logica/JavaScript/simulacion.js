@@ -44,7 +44,7 @@ export function recorrerMeses(){
         datosMensual.ventaLatas = datosMensual.latasAllenar * 60;
         storageMeses.push({...datosMensual});
         
-        console.log('datosMensual',{...datosMensual})
+        // console.log('datosMensual',{...datosMensual})
     }
 
         //Dato trimestral
@@ -52,13 +52,13 @@ export function recorrerMeses(){
         datosTrimestral.latasAllenar = Math.trunc(derrame/354);
         datosTrimestral.perdidaJarabeDinero = costoTotalLata;
         datosTrimestral.ventaLatas = datosTrimestral.latasAllenar * 60; 
-        console.log('numSemana: ',numSemana);
+        // console.log('numSemana: ',numSemana);
 
         storageTrimestre.push({...datosTrimestral});
         
-        console.log(storageSemanas);
-        console.log(storageMeses);
-        console.log(storageTrimestre);
+        // console.log(storageSemanas);
+        // console.log(storageMeses);
+        // console.log(storageTrimestre);
 
         return datosTrimestral;
 
@@ -77,7 +77,7 @@ function recorrerDias(){
         if(semana == 5){
             numSemana++;
             semana = 1;
-            console.log("Derrame semanal",derrameSemanal);
+            // console.log("Derrame semanal",derrameSemanal);
             storageSemanas.push(derrameSemanal/1000);
             derrameSemanal = 0;
         }

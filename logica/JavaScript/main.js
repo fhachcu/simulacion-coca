@@ -1,6 +1,3 @@
-import {obtenerNumero } from "./NumerosAleatorios/congruencialAditivo.js";
-import {obtenerNumero as mixto} from "./NumerosAleatorios/congruencialMixto.js";
-import { uniforme, normal, binomial } from "./distribuciones.js";
 import {recorrerMeses, storageMeses, storageSemanas, storageTrimestre} from './simulacion.js'
 
 
@@ -10,8 +7,9 @@ let tablaTrimestral = document.getElementById('trimestral');
 
 document.getElementById('simular').addEventListener('click',()=>{
 
-  console.log("Datos de un trimestre",recorrerMeses());
-  console.log("Hola",storageSemanas);
+  // console.log("Datos de un trimestre",recorrerMeses());
+  // console.log("Hola",storageSemanas);
+  recorrerMeses()
   renderizar();
  
 });
@@ -21,7 +19,7 @@ const renderizar = () => {
   storageSemanas.forEach((current, index) => {
 
     tablaSemana.innerHTML +=` <tr>
-                             <th scope="row">${index}</th>
+                             <th scope="row">${index+1}</th>
                              <td>${current.toFixed(2)}</td>
                             `
 });
