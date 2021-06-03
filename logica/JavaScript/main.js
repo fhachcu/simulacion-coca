@@ -44,6 +44,7 @@ storageTrimestre.forEach((current, index) => {
 
 document.getElementById('simular2').classList.remove('none-custom');  
 document.getElementById('spinner').classList.add('none-custom');
+document.getElementById('spinner-w-id').classList.add('none-custom');
 document.getElementById('img-coca').classList.add('none-custom');
 document.getElementById('tabla').classList.remove('none-custom');
 

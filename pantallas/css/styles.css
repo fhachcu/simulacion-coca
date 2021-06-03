@@ -204,7 +204,7 @@ table{
 }
 
 .none-custom{
-  display: none;
+  display: none !important;
 }
 
 
@@ -252,9 +252,12 @@ table{
   width: 50%;
 }
 
+.spinner-wrapper{
+  height: 67vh;
+}
+
 footer{
-  position: absolute;
-    bottom: 0;
+    bottom: 0px;
 }
   }
 
@@ -268,9 +271,12 @@ footer{
   }
 
   footer{
-    position: absolute;
     bottom: 0px;
   }
+  .spinner-wrapper{
+    height: 78vh;
+  }
+
 
     }
   
