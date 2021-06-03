@@ -242,5 +242,35 @@ table{
     top: 25vh;
     right: 4vw;
   }
+  #img-coca{
+    position: absolute;
+    left: -10vw;
+    top: 10vh;
+
+}
+.lata-coca{
+  width: 50%;
 }
 
+footer{
+  position: absolute;
+    bottom: 0;
+}
+  }
+
+
+
+  @media (min-width: 1700px) {
+  .lata-coca{
+    position: absolute;
+    left: -5vw;
+    bottom: -1vh;
+  }
+
+  footer{
+    position: absolute;
+    bottom: 0px;
+  }
+
+    }
+  
