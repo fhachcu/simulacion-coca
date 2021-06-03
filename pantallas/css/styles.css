@@ -227,3 +227,20 @@ table{
   bottom: 0;
 }
 
+@media (max-width: 1700px) {
+  .contenedor {
+    width: 90%;
+    max-width: 1200px;
+    background-size: cover;
+    background-position: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+    padding: 20px 30px;
+    z-index: 99;
+    position: absolute;
+    top: 25vh;
+    right: 4vw;
+  }
+}
+

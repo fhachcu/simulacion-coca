@@ -52,6 +52,7 @@ document.getElementById('tabla').classList.remove('none-custom');
 
 
 
+
 document.getElementById('simular2').addEventListener('click',()=>{
   location.href = '/pantallas/bienvenida.html';
 });
