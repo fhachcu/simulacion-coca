@@ -1,91 +1,102 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x"
-      crossorigin="anonymous"
-    />
-    <link rel="stylesheet" href="css/styles.css" />
-    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
-    <title>Simulador</title>
-  </head>
-  <body>
-    <header class="container">
-      <div class="row justify-content-around">
-        <div class="col-6">
-             <img
-        src="img/580b57fbd9996e24bc43c0e3.png"
-        class="img-coca"
-        alt="logo-coca-cola"
-        onclick="location.href='bienvenida.html'"
-      />
-        </div>
-        <div class="col-6">
-            <h1 class="mt-4">Simulador Without Losses</h1>
-            <button id="simular" class="btn btn-success btn-simulate m-2">Simular</button>
-        </div>
-      </div>
-     
-      
-    </header>
 
-    <div class="container">
-      <div class="row justify-content-around">
-      <div class="col-12">
-          <h3 class="text-center">Resultados Semanal</h3>
-          <table class="table table-hover">
-            <thead>
-              <tr>
-                <th scope="col">N° Semanas</th>
-                <th scope="col">Volumen(Litros)</th>
-              </tr>
-            </thead>
-            <tbody id="semanal">
-            </tbody>
-          </table>
-          <h3 class="text-center">Resultados Mensual</h3>
-          <table class="table table-hover">
-            <thead>
-              <tr>
-                <th scope="col">N° Mes</th>
-                <th scope="col">Volumen(Litros)</th>
-                <th scope="col">Perdida($)</th>
-                <th scope="col">Latas a llenar</th>
-                <th scope="col">Ganancia latas sin llenar</th>
-              </tr>
-            </thead>
-            <tbody id="mensual">
-              <tr>
-              </tr>
-            </tbody>
-          </table>
-          <h3 class="text-center">Resultados Trimestral</h3>
-          <table class="table table-hover">
-            <thead>
-              <tr>
-                <th scope="col">Volumen(Litros)</th>
-                <th scope="col">Perdida($)</th>
-                <th scope="col">Latas a llenar</th>
-                <th scope="col">Ganancia latas sin llenar</th>
-              </tr>
-            </thead>
-            <tbody id="trimestral">
-            </tbody>
-          </table>
-        </div>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous" />
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+  <title>Simulador</title>
+</head>
+
+<body>
+  <header class="container">
+    <div class="row justify-content-around">
+      <div class="col-6">
+        <img src="img/580b57fbd9996e24bc43c0e3.png" class="img-coca" alt="logo-coca-cola"
+          onclick="location.href='bienvenida.html'" />
+      </div>
+      <div class="col-6">
+        <h1 class="mt-4">Simulador Without Losses</h1>
+        <p>A continuación se va a simular el comportamiento </p>
+        <button id="simular2" class="btn btn-success btn-simulate m-2 none-custom">Recargar</button>
       </div>
     </div>
-    <footer class="text-center fs-6">UTN - FRT - SIMULACION &copy;2021</footer>
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
-      crossorigin="anonymous"
-    ></script>
-    <script src="../logica/JavaScript/main.js" type="module"></script>
-  </body>
+
+
+  </header>
+
+  <div class="container">
+    <div class="spinner-wrapper">
+      <div id="spinner" class="sk-fading-circle">
+        <div class="sk-circle1 sk-circle"></div>
+        <div class="sk-circle2 sk-circle"></div>
+        <div class="sk-circle3 sk-circle"></div>
+        <div class="sk-circle4 sk-circle"></div>
+        <div class="sk-circle5 sk-circle"></div>
+        <div class="sk-circle6 sk-circle"></div>
+        <div class="sk-circle7 sk-circle"></div>
+        <div class="sk-circle8 sk-circle"></div>
+        <div class="sk-circle9 sk-circle"></div>
+        <div class="sk-circle10 sk-circle"></div>
+        <div class="sk-circle11 sk-circle"></div>
+        <div class="sk-circle12 sk-circle"></div>
+      </div>
+      <img id="img-coca" src="../logica/assets/coca.png" class="lata-coca">
+    </div>
+    <div id="tabla" class="row justify-content-around none-custom">
+      <div class="col-12">
+        <h3 class="text-center">Resultados Semanal</h3>
+        <table class="table table-hover">
+          <thead>
+            <tr>
+              <th scope="col">N° Semanas</th>
+              <th scope="col">Volumen(Litros)</th>
+            </tr>
+          </thead>
+          <tbody id="semanal">
+          </tbody>
+        </table>
+        <h3 class="text-center">Resultados Mensual</h3>
+        <table class="table table-hover">
+          <thead>
+            <tr>
+              <th scope="col">N° Mes</th>
+              <th scope="col">Volumen(Litros)</th>
+              <th scope="col">Perdida($)</th>
+              <th scope="col">Latas a llenar</th>
+              <th scope="col">Ganancia latas sin llenar</th>
+            </tr>
+          </thead>
+          <tbody id="mensual">
+            <tr>
+            </tr>
+          </tbody>
+        </table>
+        <h3 class="text-center">Resultados Trimestral</h3>
+        <table class="table table-hover">
+          <thead>
+            <tr>
+              <th scope="col">Volumen(Litros)</th>
+              <th scope="col">Perdida($)</th>
+              <th scope="col">Latas a llenar</th>
+              <th scope="col">Ganancia latas sin llenar</th>
+            </tr>
+          </thead>
+          <tbody id="trimestral">
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+  <footer class="text-center fs-6">UTN - FRT - SIMULACION &copy;2021</footer>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
+    crossorigin="anonymous"></script>
+  <script src="../logica/JavaScript/main.js" type="module"></script>
+</body>
+
 </html>

@@ -4,18 +4,13 @@ import {recorrerMeses, storageMeses, storageSemanas, storageTrimestre} from './s
 let tablaSemana = document.getElementById('semanal');
 let tablaMensual = document.getElementById('mensual');
 let tablaTrimestral = document.getElementById('trimestral');
+let recargar = false;
 
-document.getElementById('simular').addEventListener('click',()=>{
-
-  // console.log("Datos de un trimestre",recorrerMeses());
-  // console.log("Hola",storageSemanas);
-  recorrerMeses()
-  renderizar();
- 
-});
+recorrerMeses();
 
 const renderizar = () => {
-
+  
+  recargar = true;
   storageSemanas.forEach((current, index) => {
 
     tablaSemana.innerHTML +=` <tr>
@@ -27,7 +22,7 @@ const renderizar = () => {
 storageMeses.forEach((current, index) => {
 
   tablaMensual.innerHTML += `<tr>
-                            <th scope="row">${index}</th>
+                            <th scope="row">${index+1}</th>
                             <td>${current.derrame.toFixed(2)}</td>
                             <td>${current.perdidaJarabeDinero.toFixed(2)}</td>
                             <td>${current.latasAllenar.toFixed(0)}</td>
@@ -47,10 +42,22 @@ storageTrimestre.forEach((current, index) => {
                               `
 });
 
+document.getElementById('simular2').classList.remove('none-custom');  
+document.getElementById('spinner').classList.add('none-custom');
+document.getElementById('img-coca').classList.add('none-custom');
+document.getElementById('tabla').classList.remove('none-custom');
+
+
 }
 
 
 
- 
+document.getElementById('simular2').addEventListener('click',()=>{
+  location.href = '/pantallas/bienvenida.html';
+});
+
+
+renderizar();
+
 
 

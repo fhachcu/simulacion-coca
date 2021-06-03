@@ -60,7 +60,7 @@ export function recorrerMeses(){
         // console.log(storageMeses);
         // console.log(storageTrimestre);
 
-        return datosTrimestral;
+        return true;
 
 
 }
