@@ -1,6 +1,4 @@
 import { obtenerNumero as aditivo } from "./NumerosAleatorios/congruencialAditivo.js";
-import { obtenerNumero as mixto } from "./NumerosAleatorios/congruencialMixto.js";
-
 
 // Distribución uniforme
 export const uniforme = (min,max,aleatorio) => {
