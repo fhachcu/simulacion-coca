@@ -4,7 +4,6 @@ import {binomial, poisson, normal} from './distribuciones.js';
 let derrame = 0;
 let derrameMensual = 0;
 let derrameSemanal = 0;
-let binomialAux;
 let numSemana = 0;
 
 const datosTrimestral = {
@@ -27,6 +26,7 @@ export const storageTrimestre = [];
 
 //**********---------**************
 
+//Recorremos los meses
 export function recorrerMeses(){
 
     let costoTotalLata = 0;
@@ -34,6 +34,7 @@ export function recorrerMeses(){
     for(let i=0; i<3; i++){
         
         recorrerDias();
+
         let costoDerramemMensual = normal(17,3);
         costoTotalLata = costoTotalLata +(costoDerramemMensual*(derrameMensual/354));   
         
@@ -44,7 +45,6 @@ export function recorrerMeses(){
         datosMensual.ventaLatas = datosMensual.latasAllenar * 60;
         storageMeses.push({...datosMensual});
         
-        // console.log('datosMensual',{...datosMensual})
     }
 
         //Dato trimestral
@@ -52,24 +52,19 @@ export function recorrerMeses(){
         datosTrimestral.latasAllenar = Math.trunc(derrame/354);
         datosTrimestral.perdidaJarabeDinero = costoTotalLata;
         datosTrimestral.ventaLatas = datosTrimestral.latasAllenar * 60; 
-        // console.log('numSemana: ',numSemana);
 
         storageTrimestre.push({...datosTrimestral});
-        
-        // console.log(storageSemanas);
-        // console.log(storageMeses);
-        // console.log(storageTrimestre);
-
-        return true;
-
+     
 
 }
 
+//Recorremos los días
 function recorrerDias(){
     
     let semana = 1;
     derrameMensual = 0;
 
+    //Un mes tiene 20 días hábiles
     for(let i=0; i<20; i++){
 
         recorrerHoras();
@@ -77,7 +72,6 @@ function recorrerDias(){
         if(semana == 5){
             numSemana++;
             semana = 1;
-            // console.log("Derrame semanal",derrameSemanal);
             storageSemanas.push(derrameSemanal/1000);
             derrameSemanal = 0;
         }
@@ -86,18 +80,23 @@ function recorrerDias(){
 
 }
 
-
+//Recorremos las horas
 function recorrerHoras(){
     for(let i=0; i<8; i++){
             recorrerMinutos();
     }
 }
 
+//Recorremos los minutos
 function recorrerMinutos(){
     for(let i=0; i<60; i++){
+        //Obtenemos las latas
         let latas = poisson(1800);
+        //Recorremos las latas
         for(let x = 0; x<latas; x++){
+                //Obtenemos el derrame por lata
                 let binomialAux = binomial();
+                //Usamos variables auxiliares para guardar el derrame trimestral, mensual y semanal
                 derrame = derrame + binomialAux;
                 derrameMensual = derrameMensual + binomialAux;
                 derrameSemanal = derrameSemanal + binomialAux;
