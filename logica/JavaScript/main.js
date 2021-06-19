@@ -55,7 +55,7 @@ document.getElementById('tabla').classList.remove('none-custom');
 
 
 document.getElementById('simular2').addEventListener('click',()=>{
-  location.href = '/pantallas/index.html';
+  location.href = '../../index.html';
 });
 
 
